@@ -1,0 +1,26 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "git pull"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "git pull",
+      "path": "ComfyUI"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "git pull",
+      "path": "ComfyUI/custom_nodes/ComfyUI-Manager"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "git pull",
+      "path": "workflows/ComfyUI_examples"
+    }
+  }]
+}

@@ -1,0 +1,9 @@
+{
+  "run": [{
+    "method": "fs.download",
+    "params": {
+      "uri": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/resolve/main/svd_xt.safetensors?download=true",
+      "dir": "ComfyUI/models/checkpoints"
+    }
+  }]
+}
