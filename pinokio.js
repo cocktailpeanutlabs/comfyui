@@ -1,5 +1,3 @@
-const os = require('os')
-const fs = require('fs')
 const path = require("path")
 module.exports = {
   title: "ComfyUI",
@@ -14,7 +12,7 @@ module.exports = {
       let running = cpu_running || gpu_running
       let arr
       if (running) {
-        let memory = kernel.local(__dirname, "start.json")
+        let memory = kernel.memory.local[path.resolve(__dirname, "start.json")]
         arr = [
           { icon: "fa-solid fa-terminal", text: "Terminal", href: (gpu_running ? "start.json" : "start_cpu.json") }
         ]
