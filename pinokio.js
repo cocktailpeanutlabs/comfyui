@@ -6,7 +6,10 @@ module.exports = {
   pinokiod: ">=0.0.443",
   menu: async (kernel) => {
     let installed = await kernel.exists(__dirname, "ComfyUI", "env")
-    if (installed) {
+    let installing = kernel.running(__dirname, "install.json") || kernel.running(__dirname, "insatll_mac.json") || kernel.running(__dirname, "install_without_models.json")
+    if (installing) {
+      return [{ icon: "fa-solid fa-plug", text: "Installing", href: "install.json" }]
+    } else if (installed) {
       let gpu_running = kernel.running(__dirname, "start.json")
       let cpu_running = kernel.running(__dirname, "start_cpu.json")
       let running = cpu_running || gpu_running
