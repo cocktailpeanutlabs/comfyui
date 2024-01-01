@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  max-width: 600px;
+  width: 100%;
+  font-family: Sans-serif;
+  letter-spacing: -1px;
+ }
+ input[type=url] {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: rgba(0,0,0,0.1);
+ }
+ button {
+  border: none;
+  background: black;
+  color: white;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+ }
+</style>
+</head>
+<body>
+<form>
+  <h1>Download Stable Diffusion Checkpoints</h1>
+  <input type='url' placeholder="enter the .safetensors model url">
+  <button>Download</button>
+</form>
+<script>
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault()
+  e.stopPropagation()
+  location.href = "download.json?url=" + e.target.value
+})
+</script>
+</body>
+</html>
