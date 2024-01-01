@@ -29,7 +29,7 @@ module.exports = {
       } else {
         arr = [
           { icon: "fa-solid fa-power-off", text: "Start", href: "start.json" },
-          { icon: "fa-solid fa-power-off", text: "Launch CPU Mode (Slow)", href: "start_cpu.json", }
+          { icon: "fa-solid fa-power-off", text: "Start CPU Mode (Slow)", href: "start_cpu.json", }
         ]
       }
       arr = arr.concat([{
