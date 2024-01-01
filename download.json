@@ -3,7 +3,7 @@
     "method": "fs.download",
     "params": {
       "uri": "{{input.url}}",
-      "dir": "app/models/checkpoints"
+      "dir": "{{input.path}}"
     }
   }]
 }
