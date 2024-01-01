@@ -37,6 +37,7 @@ module.exports = {
         text: "Download Models",
         menu: [
           { text: "SDXL", icon: "fa-solid fa-download", href: "download-sdxl.json", },
+          { text: "SDXL Turbo", icon: "fa-solid fa-download", href: "download-turbo.json", },
           { text: "Stable Video XT", icon: "fa-solid fa-download", href: "download-svd-xt.json", },
           { text: "Stable Video", icon: "fa-solid fa-download", href: "download-svd.json", },
           { text: "LCM LoRA", icon: "fa-solid fa-download", href: "download-lcm-lora.json", }
