@@ -32,17 +32,18 @@ module.exports = {
           { icon: "fa-solid fa-power-off", text: "Launch CPU Mode (Slow)", href: "start_cpu.json", }
         ]
       }
-      arr = arr.concat({
+      arr = arr.concat([{
         icon: "fa-solid fa-download",
         text: "Download",
         menu: [
-          { icon: "fa-solid fa-rotate", text: "Update", href: "update.json", },
           { text: "Download SDXL Turbo Model", icon: "fa-solid fa-download", href: "download-turbo.json", },
           { text: "Download Stable Video XT Model", icon: "fa-solid fa-download", href: "download-svd-xt.json", },
           { text: "Download Stable Video Model", icon: "fa-solid fa-download", href: "download-svd.json", },
           { text: "Download LCM LoRA", icon: "fa-solid fa-download", href: "download-lcm-lora.json", }
         ]
-      })
+      }, {
+        icon: "fa-solid fa-rotate", text: "Update", href: "update.json"
+      }])
       return arr
     } else {
       return [{ icon: "fa-solid fa-plug", text: "Install", href: "install.json" }]
