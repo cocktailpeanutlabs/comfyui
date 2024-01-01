@@ -2,7 +2,7 @@ module.exports = {
   title: "ComfyUI",
   description: "Stable Diffusion & Stable Video Diffusion GUI",
   icon: "icon.png",
-  pinokiod: ">=0.0.443",
+  pinokiod: ">=0.1.49",
   menu: async (kernel) => {
     let installed = await kernel.exists(__dirname, "app", "env")
     let installing = kernel.running(__dirname, "install.json") || kernel.running(__dirname, "insatll_mac.json") || kernel.running(__dirname, "install_without_models.json")
@@ -36,10 +36,10 @@ module.exports = {
         icon: "fa-solid fa-download",
         text: "Download Models",
         menu: [
-          { text: "Download SDXL Turbo Model", icon: "fa-solid fa-download", href: "download-turbo.json", },
-          { text: "Download Stable Video XT Model", icon: "fa-solid fa-download", href: "download-svd-xt.json", },
-          { text: "Download Stable Video Model", icon: "fa-solid fa-download", href: "download-svd.json", },
-          { text: "Download LCM LoRA", icon: "fa-solid fa-download", href: "download-lcm-lora.json", }
+          { text: "SDXL Turbo", icon: "fa-solid fa-download", href: "download-turbo.json", },
+          { text: "Stable Video XT", icon: "fa-solid fa-download", href: "download-svd-xt.json", },
+          { text: "Stable Video", icon: "fa-solid fa-download", href: "download-svd.json", },
+          { text: "LCM LoRA", icon: "fa-solid fa-download", href: "download-lcm-lora.json", }
         ]
       }, {
         icon: "fa-solid fa-rotate", text: "Update", href: "update.json"
