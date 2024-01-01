@@ -36,14 +36,14 @@ form {
 <body>
 <form>
   <h1>Download Stable Diffusion Checkpoints</h1>
-  <input type='url' placeholder="enter the .safetensors model url">
+  <input id='url' type='url' placeholder="enter the .safetensors model url">
   <button>Download</button>
 </form>
 <script>
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault()
   e.stopPropagation()
-  location.href = "download.json?url=" + e.target.value
+  location.href = "download.json?url=" + document.querySelector("#url").value
 })
 </script>
 </body>
