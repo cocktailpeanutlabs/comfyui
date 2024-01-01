@@ -8,13 +8,13 @@
     "method": "shell.run",
     "params": {
       "message": "git pull",
-      "path": "ComfyUI"
+      "path": "app"
     }
   }, {
     "method": "shell.run",
     "params": {
       "message": "git pull",
-      "path": "ComfyUI/custom_nodes/ComfyUI-Manager"
+      "path": "app/custom_nodes/ComfyUI-Manager"
     }
   }, {
     "method": "shell.run",

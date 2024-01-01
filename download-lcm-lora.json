@@ -3,7 +3,7 @@
     "method": "fs.download",
     "params": {
       "uri": "https://huggingface.co/latent-consistency/lcm-lora-sdxl/resolve/main/pytorch_lora_weights.safetensors?download=true",
-      "dir": "ComfyUI/models/loras"
+      "dir": "app/models/loras"
     }
   }]
 }

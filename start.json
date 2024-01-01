@@ -4,7 +4,7 @@
     "method": "shell.run",
     "params": {
       "venv": "env",
-      "path": "ComfyUI",
+      "path": "app",
       "env": { "PYTORCH_MPS_HIGH_WATERMARK_RATIO": "0.0" },
       "message": "python main.py {{platform === 'darwin' ? '--force-fp16' : ''}}",
       "on": [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
@@ -12,12 +12,7 @@
   }, {
     "method": "local.set",
     "params": {
-      "url": "{{new URL(input.event[0]).href}}"
-    }
-  }, {
-    "method": "notify",
-    "params": {
-      "html": "Click the Web UI tab to get started!"
+      "url": "{{input.event[0]}}"
     }
   }]
 }

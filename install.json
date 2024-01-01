@@ -1,4 +1,9 @@
 {
+  "cmds": {
+    "nvidia": "pip install torch torchvision torchaudio xformers --index-url https://download.pytorch.org/whl/cu118",
+    "amd": "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.6",
+    "default": "pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cpu"
+  },
   "requires": [{
     "type": "conda",
     "name": "ffmpeg",
@@ -7,35 +12,51 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "git clone https://github.com/comfyanonymous/ComfyUI.git"
+      "message": "git clone https://github.com/comfyanonymous/ComfyUI.git app"
+    }
+  }, {
+    "method": "fs.share",
+    "params": {
+      "interface": {
+        "checkpoints": "app/models/checkpoints",
+        "clip": "app/models/clip",
+        "clip_vision": "app/models/clip_vision",
+        "configs": "app/models/configs",
+        "controlnet": "app/models/controlnet",
+        "embeddings": "app/models/embeddings",
+        "loras": "app/models/loras",
+        "upscale_models": "app/models/upscale_models",
+        "vae": "app/models/vae"
+      },
+      "peers": ["https://github.com/cocktailpeanutlabs/automatic1111.git"]
     }
   }, {
     "method": "shell.run",
     "params": {
       "message": "git clone https://github.com/ltdrdata/ComfyUI-Manager",
-      "path": "ComfyUI/custom_nodes"
+      "path": "app/custom_nodes"
     }
   }, {
     "method": "shell.run",
     "params": {
       "venv": "env",
-      "path": "ComfyUI",
+      "path": "app",
       "message": [
-        "{{pip.install.torch}}",
-        "pip install -r requirements.txt"
+        "pip install -r requirements.txt",
+        "{{(gpu === 'nvidia' ? self.cmds.nvidia : (gpu === 'amd' ? self.cmds.amd : self.cmds.default))}}"
       ]
     }
   }, {
     "method": "fs.download",
     "params": {
       "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors",
-      "path": "ComfyUI/models/checkpoints/sd_xl_base_1.0.safetensors"
+      "dir": "app/models/checkpoints"
     }
   }, {
     "method": "fs.download",
     "params": {
       "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors",
-      "path": "ComfyUI/models/checkpoints/sd_xl_refiner_1.0.safetensors"
+      "dir": "app/models/checkpoints"
     }
   }, {
     "method": "shell.run",

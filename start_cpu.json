@@ -4,7 +4,7 @@
     "method": "shell.run",
     "params": {
       "venv": "env",
-      "path": "ComfyUI",
+      "path": "app",
       "env": { "PYTORCH_MPS_HIGH_WATERMARK_RATIO": "0.0" },
       "message": "python main.py --cpu",
       "on": [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
@@ -13,11 +13,6 @@
     "method": "local.set",
     "params": {
       "url": "{{input.event[0]}}"
-    }
-  }, {
-    "method": "notify",
-    "params": {
-      "html": "Click the Web UI tab to get started!"
     }
   }]
 }
