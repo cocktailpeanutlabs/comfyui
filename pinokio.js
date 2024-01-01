@@ -9,7 +9,10 @@ module.exports = {
     if (installing) {
       return [{ icon: "fa-solid fa-plug", text: "Installing", href: "install.json" }]
     } else if (installed) {
-      let url = kernel.memory.local.url
+      let memory = {
+        start: kernel.local(__dirname, "start.json"),
+        start_cpu: kernel.local(__dirname, "start_cpu.json")
+      }
       let gpu_running = kernel.running(__dirname, "start.json")
       let cpu_running = kernel.running(__dirname, "start_cpu.json")
       let running = cpu_running || gpu_running
@@ -18,8 +21,10 @@ module.exports = {
         arr = [
           { icon: "fa-solid fa-terminal", text: "Terminal", href: (gpu_running ? "start.json" : "start_cpu.json") }
         ]
-        if (url) {
-          arr.push({ icon: "fa-solid fa-rocket", text: "Web UI", href: url })
+        if (memory.start && memory.start.url) {
+          arr.push({ icon: "fa-solid fa-rocket", text: "Web UI", href: memory.start.url })
+        } else if (memory.start_cpu && memory.start_cpu.url) {
+          arr.push({ icon: "fa-solid fa-rocket", text: "Web UI", href: memory.start_cpu.url })
         }
       } else {
         arr = [
