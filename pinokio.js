@@ -34,7 +34,7 @@ module.exports = {
       }
       arr = arr.concat([{
         icon: "fa-solid fa-download",
-        text: "Download",
+        text: "Download Models",
         menu: [
           { text: "Download SDXL Turbo Model", icon: "fa-solid fa-download", href: "download-turbo.json", },
           { text: "Download Stable Video XT Model", icon: "fa-solid fa-download", href: "download-svd-xt.json", },
