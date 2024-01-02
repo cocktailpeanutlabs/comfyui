@@ -10,8 +10,8 @@ module.exports = {
       return [{ icon: "fa-solid fa-plug", text: "Installing", href: "install.json" }]
     } else if (installed) {
       let memory = {
-        start: kernel.local(__dirname, "start.json"),
-        start_cpu: kernel.local(__dirname, "start_cpu.json")
+        start: kernel.memory.local[path.resolve(__dirname, "start.js")],
+        start_cpu: kernel.memory.local[path.resolve(__dirname, "start_cpu.js")],
       }
       let gpu_running = kernel.running(__dirname, "start.json")
       let cpu_running = kernel.running(__dirname, "start_cpu.json")
