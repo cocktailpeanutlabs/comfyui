@@ -21,25 +21,6 @@
       "message": "git clone https://github.com/comfyanonymous/ComfyUI.git app"
     }
   }, {
-    "method": "fs.share",
-    "params": {
-      "drive": {
-        "checkpoints": "app/models/checkpoints",
-        "clip": "app/models/clip",
-        "clip_vision": "app/models/clip_vision",
-        "configs": "app/models/configs",
-        "controlnet": "app/models/controlnet",
-        "embeddings": "app/models/embeddings",
-        "loras": "app/models/loras",
-        "upscale_models": "app/models/upscale_models",
-        "vae": "app/models/vae"
-      },
-      "peers": [
-        "https://github.com/cocktailpeanutlabs/automatic1111.git",
-        "https://github.com/cocktailpeanutlabs/fooocus.git"
-      ]
-    }
-  }, {
     "method": "shell.run",
     "params": {
       "message": "git clone https://github.com/ltdrdata/ComfyUI-Manager",
@@ -62,6 +43,12 @@
       "dir": "app/models/checkpoints"
     }
   }, {
+    "method": "fs.download",
+    "params": {
+      "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors",
+      "dir": "app/models/checkpoints"
+    }
+  }, {
     "method": "shell.run",
     "params": {
       "message": "mkdir workflows"
@@ -74,6 +61,28 @@
         "git clone https://github.com/cocktailpeanut/comfymp4"
       ],
       "path": "workflows"
+    }
+  }, {
+    "method": "fs.share",
+    "params": {
+      "drive": {
+        "torch": "app/env/lib/python3.10/site-packages/torch",
+        "torchvision": "app/env/lib/python3.10/site-packages/torchvision",
+        "torchaudio": "app/env/lib/python3.10/site-packages/torchaudio",
+        "checkpoints": "app/models/checkpoints",
+        "clip": "app/models/clip",
+        "clip_vision": "app/models/clip_vision",
+        "configs": "app/models/configs",
+        "controlnet": "app/models/controlnet",
+        "embeddings": "app/models/embeddings",
+        "loras": "app/models/loras",
+        "upscale_models": "app/models/upscale_models",
+        "vae": "app/models/vae"
+      },
+      "peers": [
+        "https://github.com/cocktailpeanutlabs/automatic1111.git",
+        "https://github.com/cocktailpeanutlabs/fooocus.git"
+      ]
     }
   }, {
     "method": "notify",
