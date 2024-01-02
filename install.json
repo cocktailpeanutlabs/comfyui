@@ -11,6 +11,11 @@
     "args": "-c conda-forge"
   }],
   "run": [{
+    "method": "fs.rm",
+    "params": {
+      "path": "app"
+    }
+  }, {
     "method": "shell.run",
     "params": {
       "message": "git clone https://github.com/comfyanonymous/ComfyUI.git app"

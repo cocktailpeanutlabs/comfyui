@@ -47,10 +47,15 @@ module.exports = {
         ]
       }, {
         icon: "fa-solid fa-rotate", text: "Update", href: "update.json"
+      }, {
+        icon: "fa-solid fa-plug", text: "Fresh reinstall", href: "install.json"
       }])
       return arr
     } else {
-      return [{ icon: "fa-solid fa-plug", text: "Install", href: "install.json" }]
+      return [
+        { icon: "fa-solid fa-plug", text: "Install", href: "install.json" },
+        { icon: "fa-solid fa-rotate", text: "Update", href: "update.json" }
+      ]
     }
   }
 }
