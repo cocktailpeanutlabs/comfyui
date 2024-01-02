@@ -37,18 +37,6 @@
       ]
     }
   }, {
-    "method": "fs.download",
-    "params": {
-      "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors",
-      "dir": "app/models/checkpoints"
-    }
-  }, {
-    "method": "fs.download",
-    "params": {
-      "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors",
-      "dir": "app/models/checkpoints"
-    }
-  }, {
     "method": "shell.run",
     "params": {
       "message": "mkdir workflows"
@@ -83,6 +71,18 @@
         "https://github.com/cocktailpeanutlabs/automatic1111.git",
         "https://github.com/cocktailpeanutlabs/fooocus.git"
       ]
+    }
+  }, {
+    "method": "fs.download",
+    "params": {
+      "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors",
+      "dir": "app/models/checkpoints"
+    }
+  }, {
+    "method": "fs.download",
+    "params": {
+      "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors",
+      "dir": "app/models/checkpoints"
     }
   }, {
     "method": "notify",
