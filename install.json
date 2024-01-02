@@ -18,7 +18,7 @@
   }, {
     "method": "fs.share",
     "params": {
-      "interface": {
+      "drive": {
         "checkpoints": "app/models/checkpoints",
         "clip": "app/models/clip",
         "clip_vision": "app/models/clip_vision",
@@ -29,7 +29,10 @@
         "upscale_models": "app/models/upscale_models",
         "vae": "app/models/vae"
       },
-      "peers": ["https://github.com/cocktailpeanutlabs/automatic1111.git"]
+      "peers": [
+        "https://github.com/cocktailpeanutlabs/automatic1111.git",
+        "https://github.com/cocktailpeanutlabs/fooocus.git"
+      ]
     }
   }, {
     "method": "shell.run",
