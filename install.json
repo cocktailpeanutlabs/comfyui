@@ -27,7 +27,6 @@
         "checkpoints": "app/models/checkpoints",
         "clip": "app/models/clip",
         "clip_vision": "app/models/clip_vision",
-        "configs": "app/models/configs",
         "controlnet": "app/models/controlnet",
         "embeddings": "app/models/embeddings",
         "loras": "app/models/loras",
