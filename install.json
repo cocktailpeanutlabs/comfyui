@@ -54,9 +54,9 @@
     "method": "fs.share",
     "params": {
       "drive": {
-        "torch": "app/env/lib/python3.10/site-packages/torch",
-        "torchvision": "app/env/lib/python3.10/site-packages/torchvision",
-        "torchaudio": "app/env/lib/python3.10/site-packages/torchaudio",
+        "torch": "{{platform === 'win32' ? 'app/env/Lib/site-packages/torch' : 'app/env/lib/python3.10/site-packages/torch'}}",
+        "torchvision": "{{platform === 'win32' ? 'app/env/Lib/site-packages/torchvision' : 'app/env/lib/python3.10/site-packages/torchvision'}}",
+        "torchaudio": "{{platform === 'win32' ? 'app/env/Lib/site-packages/torchaudio' : 'app/env/lib/python3.10/site-packages/torchaudio'}}",
         "checkpoints": "app/models/checkpoints",
         "clip": "app/models/clip",
         "clip_vision": "app/models/clip_vision",
