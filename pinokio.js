@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
   title: "ComfyUI",
   description: "Stable Diffusion & Stable Video Diffusion GUI",
