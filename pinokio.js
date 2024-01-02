@@ -38,12 +38,12 @@ module.exports = {
         icon: "fa-solid fa-download",
         text: "Download Models",
         menu: [
-          { text: "Download by URL", icon: "fa-solid fa-download", href: "download.html?raw=true" },
-          { text: "SDXL", icon: "fa-solid fa-download", href: "download-sdxl.json", },
-          { text: "SDXL Turbo", icon: "fa-solid fa-download", href: "download-turbo.json", },
-          { text: "Stable Video XT", icon: "fa-solid fa-download", href: "download-svd-xt.json", },
-          { text: "Stable Video", icon: "fa-solid fa-download", href: "download-svd.json", },
-          { text: "LCM LoRA", icon: "fa-solid fa-download", href: "download-lcm-lora.json", }
+          { text: "Download by URL", icon: "fa-solid fa-download", href: "download.html?raw=true", mode: "refresh" },
+          { text: "SDXL", icon: "fa-solid fa-download", href: "download-sdxl.json", mode: "refresh" },
+          { text: "SDXL Turbo", icon: "fa-solid fa-download", href: "download-turbo.json", mode: "refresh" },
+          { text: "Stable Video XT", icon: "fa-solid fa-download", href: "download-svd-xt.json", mode: "refresh" },
+          { text: "Stable Video", icon: "fa-solid fa-download", href: "download-svd.json", mode: "refresh" },
+          { text: "LCM LoRA", icon: "fa-solid fa-download", href: "download-lcm-lora.json", mode: "refresh" }
         ]
       }, {
         icon: "fa-solid fa-rotate", text: "Update", href: "update.json"
