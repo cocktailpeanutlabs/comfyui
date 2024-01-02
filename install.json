@@ -1,4 +1,5 @@
 {
+  "pinokiod": ">=0.1.49",
   "cmds": {
     "nvidia": "pip install torch torchvision torchaudio xformers --index-url https://download.pytorch.org/whl/cu118",
     "amd": "pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.6",
