@@ -1,9 +1,9 @@
 const path = require('path')
 module.exports = {
+  version: 1,
   title: "ComfyUI",
   description: "Stable Diffusion & Stable Video Diffusion GUI",
   icon: "icon.png",
-  pinokiod: ">=0.1.49",
   menu: async (kernel) => {
     let installed = await kernel.exists(__dirname, "app", "env")
     let installing = kernel.running(__dirname, "install.json") || kernel.running(__dirname, "insatll_mac.json") || kernel.running(__dirname, "install_without_models.json")
