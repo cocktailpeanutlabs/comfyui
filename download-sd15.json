@@ -1,0 +1,9 @@
+{
+  "run": [{
+    "method": "fs.download",
+    "params": {
+      "uri": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.safetensors?download=true",
+      "dir": "app/models/Stable-diffusion"
+    }
+  }]
+}
