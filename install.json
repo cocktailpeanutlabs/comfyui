@@ -48,10 +48,6 @@
     "method": "fs.share",
     "params": {
       "drive": {
-        "torch": "{{platform === 'win32' ? 'app/env/Lib/site-packages/torch' : 'app/env/lib/python3.10/site-packages/torch'}}",
-        "torchvision": "{{platform === 'win32' ? 'app/env/Lib/site-packages/torchvision' : 'app/env/lib/python3.10/site-packages/torchvision'}}",
-        "torchaudio": "{{platform === 'win32' ? 'app/env/Lib/site-packages/torchaudio' : 'app/env/lib/python3.10/site-packages/torchaudio'}}",
-        "functorch": "{{platform === 'win32' ? 'app/env/Lib/site-packages/functorch' : 'app/env/lib/python3.10/site-packages/functorch'}}",
         "checkpoints": "app/models/checkpoints",
         "clip": "app/models/clip",
         "clip_vision": "app/models/clip_vision",
@@ -66,6 +62,11 @@
         "https://github.com/cocktailpeanutlabs/automatic1111.git",
         "https://github.com/cocktailpeanutlabs/fooocus.git"
       ]
+    }
+  }, {
+    "method": "fs.share",
+    "params": {
+      "venv": "app/env"
     }
   }, {
     "method": "fs.download",
