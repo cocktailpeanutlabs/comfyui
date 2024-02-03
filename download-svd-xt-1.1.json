@@ -2,7 +2,7 @@
   "run": [{
     "method": "fs.download",
     "params": {
-      "uri": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1/resolve/main/svd_xt_1_1.safetensors?download=true",
+      "uri": "https://huggingface.co/cocktailpeanut/sv/resolve/main/svd_xt_1_1.safetensors?download=true",
       "dir": "app/models/checkpoints"
     }
   }]
