@@ -51,6 +51,8 @@ module.exports = {
       }, {
         icon: "fa-solid fa-link", text: "ComfyWorkflows", href: "https://comfyworkflows.com/" 
       }, {
+        icon: "fa-solid fa-link", text: "CivitAI", href: "https://civitai.com"
+      }, {
         icon: "fa-solid fa-rotate", text: "Update", href: "update.json"
       }, {
         icon: "fa-solid fa-plug", text: "Reinstall", href: "install.json"
