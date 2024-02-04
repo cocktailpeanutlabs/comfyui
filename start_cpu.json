@@ -1,6 +1,5 @@
 {
   "daemon": true,
-  "pinokiod": ">=0.1.49",
   "run": [{
     "method": "shell.run",
     "params": {
@@ -14,6 +13,12 @@
     "method": "local.set",
     "params": {
       "url": "{{input.event[0]}}"
+    }
+  }, {
+    "method": "proxy.start",
+    "params": {
+      "uri": "{{local.url}}",
+      "name": "Local Sharing"
     }
   }]
 }
