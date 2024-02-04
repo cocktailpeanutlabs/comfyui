@@ -66,6 +66,13 @@
   }, {
     "method": "fs.share",
     "params": {
+      "drive": {
+        "output": "app/output"
+      }
+    }
+  }, {
+    "method": "fs.share",
+    "params": {
       "venv": "app/env"
     }
   }, {
