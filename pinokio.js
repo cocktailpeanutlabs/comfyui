@@ -49,6 +49,8 @@ module.exports = {
           { text: "SD 2.1", icon: "fa-solid fa-download", href: "download-sd21.json", mode: "refresh" },
         ]
       }, {
+        icon: "fa-solid fa-link", text: "ComfyWorkflows", href: "https://comfyworkflows.com/" 
+      }, {
         icon: "fa-solid fa-rotate", text: "Update", href: "update.json"
       }, {
         icon: "fa-solid fa-plug", text: "Reinstall", href: "install.json"
