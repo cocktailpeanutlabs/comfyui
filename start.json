@@ -1,13 +1,12 @@
 {
   "daemon": true,
-  "pinokiod": ">=0.1.49",
   "run": [{
     "method": "shell.run",
     "params": {
       "venv": "env",
       "path": "app",
       "env": { "PYTORCH_MPS_HIGH_WATERMARK_RATIO": "0.0" },
-      "message": "python main.py {{platform === 'darwin' ? '--force-fp16' : ''}}",
+      "message": "python main.py {{platform === 'darwin' ? '--force-fp16' : '--disable-xformers'}}",
       "on": [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
     }
   }, {
