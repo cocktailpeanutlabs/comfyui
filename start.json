@@ -1,14 +1,25 @@
 {
   "daemon": true,
+  "cmds": {
+    "win32": {
+      "nvidia": "python main.py --disable-xformers",
+      "amd": "python main.py --directml"
+    },
+    "darwin": "python main.py --force-fp16",
+    "linux": {
+      "nvidia": "python main.py --disable-xformers",
+      "amd": "python main.py --disable-xformers"
+    }
+  },
   "run": [{
     "method": "shell.run",
     "params": {
       "venv": "env",
       "path": "app",
       "env": { "PYTORCH_MPS_HIGH_WATERMARK_RATIO": "0.0" },
-      "message": "python main.py {{platform === 'darwin' ? '--force-fp16' : '--disable-xformers'}}",
-      "on": [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
-    }
+      "message": "{{platform == 'darwin' ? self.cmds.darwin : self.cmds[platform][gpu]}}"
+    },
+    "on": [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
   }, {
     "method": "local.set",
     "params": {
