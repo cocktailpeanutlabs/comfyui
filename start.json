@@ -16,7 +16,6 @@
     "params": {
       "venv": "env",
       "path": "app",
-      "env": { "PYTORCH_MPS_HIGH_WATERMARK_RATIO": "0.0" },
       "message": "{{platform == 'darwin' ? self.cmds.darwin : self.cmds[platform][gpu]}}",
       "on": [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
     }
