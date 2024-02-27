@@ -1,0 +1,9 @@
+{
+  "run": [{
+    "method": "fs.download",
+    "params": {
+      "url": "https://huggingface.co/playgroundai/playground-v2.5-1024px-aesthetic/resolve/main/playground-v2.5-1024px-aesthetic.safetensors?download=true",
+      "dir": "app/models/checkpoints"
+    }
+  }]
+}
