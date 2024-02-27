@@ -47,6 +47,8 @@ module.exports = {
           { text: "LCM LoRA", icon: "fa-solid fa-download", href: "download-lcm-lora.json", mode: "refresh" },
           { text: "SD 1.5", icon: "fa-solid fa-download", href: "download-sd15.json", mode: "refresh" },
           { text: "SD 2.1", icon: "fa-solid fa-download", href: "download-sd21.json", mode: "refresh" },
+          { text: "Playground2.5 fp16", icon: "fa-solid fa-download", href: "download-playground-fp16.json", mode: "refresh" },
+          { text: "Playground2.5", icon: "fa-solid fa-download", href: "download-playground.json", mode: "refresh" },
         ]
       }, {
         icon: "fa-solid fa-link", text: "ComfyWorkflows", href: "https://comfyworkflows.com/" 
