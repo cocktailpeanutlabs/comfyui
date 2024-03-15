@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  version: "1.1",
+  version: "1.3",
   title: "ComfyUI",
   description: "Stable Diffusion & Stable Video Diffusion GUI",
   icon: "icon.png",

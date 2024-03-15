@@ -34,6 +34,7 @@
       "venv": "env",
       "path": "app",
       "message": [
+        "{{gpu === 'nvidia' ? 'conda install -y nvidia/label/cuda-12.1.0::cuda' : null}}",
         "{{(platform === 'darwin' ? self.cmds.darwin : (['nvidia', 'amd'].includes(gpu) ? self.cmds[platform][gpu] : self.cmds[platform].cpu))}}",
         "pip install -r requirements.txt"
       ]
