@@ -69,7 +69,8 @@
       },
       "peers": [
         "https://github.com/cocktailpeanutlabs/automatic1111.git",
-        "https://github.com/cocktailpeanutlabs/fooocus.git"
+        "https://github.com/cocktailpeanutlabs/fooocus.git",
+        "https://github.com/cocktailpeanutlabs/forge.git"
       ]
     }
   }, {
