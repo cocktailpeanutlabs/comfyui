@@ -7,10 +7,13 @@
   }, {
     "method": "shell.run",
     "params": {
-      "message": [
-        "git pull",
-        "pip install -r requirements.txt"
-      ],
+      "message": "git pull",
+      "path": "app"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "pip install -r requirements.txt",
       "path": "app"
     }
   }, {
