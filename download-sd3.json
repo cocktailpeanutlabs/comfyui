@@ -1,0 +1,18 @@
+{
+  "run": [{
+    "method": "fs.download",
+    "params": {
+      "uri": "https://huggingface.co/cocktailpeanut/3ds/resolve/main/sd3_medium_incl_clips_t5xxlfp8.safetensors?download=true",
+      "dir": "app/models/checkpoints"
+    }
+  }, {
+    "method": "fs.download",
+    "params": {
+      "dir": "workflows/sd3",
+      "uri": [
+        "https://comfyanonymous.github.io/ComfyUI_examples/sd3/sd3_simple_example.png",
+        "https://comfyanonymous.github.io/ComfyUI_examples/sd3/sd3_text_encoders_example.png"
+      ]
+    }
+  }]
+}

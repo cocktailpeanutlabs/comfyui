@@ -39,6 +39,7 @@ module.exports = {
         text: "Download Models",
         menu: [
           { text: "Download by URL", icon: "fa-solid fa-download", href: "download.html?raw=true" },
+          { text: "SD 3", icon: "fa-solid fa-download", href: "download-sd3.json", mode: "refresh" },
           { text: "SDXL", icon: "fa-solid fa-download", href: "download-sdxl.json", mode: "refresh" },
           { text: "SDXL Turbo", icon: "fa-solid fa-download", href: "download-turbo.json", mode: "refresh" },
           { text: "Stable Video XT", icon: "fa-solid fa-download", href: "download-svd-xt.json", mode: "refresh" },
