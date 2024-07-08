@@ -8,7 +8,7 @@ module.exports = {
     let installed = await kernel.exists(__dirname, "app", "env")
     let installing = kernel.running(__dirname, "install.json") || kernel.running(__dirname, "insatll_mac.json") || kernel.running(__dirname, "install_without_models.json")
     if (installing) {
-      return [{ icon: "fa-solid fa-plug", text: "Installing", href: "install.json" }]
+      return [{ default: true, icon: "fa-solid fa-plug", text: "Installing", href: "install.json" }]
     } else if (installed) {
       let memory = {
         start: kernel.memory.local[path.resolve(__dirname, "start.json")],
@@ -24,9 +24,9 @@ module.exports = {
           { icon: "fa-solid fa-terminal", text: "Terminal", href: (gpu_running ? "start.json" : "start_cpu.json") }
         ]
         if (memory.start && memory.start.url) {
-          arr.push({ icon: "fa-solid fa-rocket", text: "Web UI", href: memory.start.url })
+          arr.push({ default: true, icon: "fa-solid fa-rocket", text: "Web UI", href: memory.start.url })
         } else if (memory.start_cpu && memory.start_cpu.url) {
-          arr.push({ icon: "fa-solid fa-rocket", text: "Web UI", href: memory.start_cpu.url })
+          arr.push({ default: true, icon: "fa-solid fa-rocket", text: "Web UI", href: memory.start_cpu.url })
         }
       } else {
         arr = [
@@ -65,7 +65,7 @@ module.exports = {
       return arr
     } else {
       return [
-        { icon: "fa-solid fa-plug", text: "Install", href: "install.json" },
+        { default: true, icon: "fa-solid fa-plug", text: "Install", href: "install.json" },
         { icon: "fa-solid fa-rotate", text: "Update", href: "update.json" }
       ]
     }
