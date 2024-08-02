@@ -39,6 +39,8 @@ module.exports = {
         text: "Download Models",
         menu: [
           { text: "Download by URL", icon: "fa-solid fa-download", href: "download.html?raw=true" },
+          { text: "Flux 1 Dev", icon: "fa-solid fa-download", href: "download-flux-dev.json", mode: "refresh" },
+          { text: "Flux 1 Schnell", icon: "fa-solid fa-download", href: "download-flux-schnell.json", mode: "refresh" },
           { text: "SD 3", icon: "fa-solid fa-download", href: "download-sd3.json", mode: "refresh" },
           { text: "SDXL", icon: "fa-solid fa-download", href: "download-sdxl.json", mode: "refresh" },
           { text: "SDXL Turbo", icon: "fa-solid fa-download", href: "download-turbo.json", mode: "refresh" },
@@ -51,6 +53,8 @@ module.exports = {
           { text: "Playground2.5 fp16", icon: "fa-solid fa-download", href: "download-playground-fp16.json", mode: "refresh" },
           { text: "Playground2.5", icon: "fa-solid fa-download", href: "download-playground.json", mode: "refresh" },
         ]
+      }, {
+        icon: "fa-solid fa-link", text: "Workflows", features: "app", href: "workflows"
       }, {
         icon: "fa-solid fa-link", text: "ComfyWorkflows", href: "https://comfyworkflows.com/" 
       }, {
