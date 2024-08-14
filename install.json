@@ -23,6 +23,15 @@
       "message": "git clone https://github.com/comfyanonymous/ComfyUI.git app"
     }
   }, {
+    "when": "{{platform === 'darwin'}}",
+    "method": "shell.run",
+    "params": {
+      "path": "app",
+      "message": [
+        "git checkout 39fb74c5bd13a1dccf4d7293a2f7a755d9f43cbd"
+      ]
+    }
+  }, {
     "method": "shell.run",
     "params": {
       "message": "git clone https://github.com/ltdrdata/ComfyUI-Manager",
