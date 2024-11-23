@@ -17,7 +17,13 @@
       "venv": "env",
       "path": "app",
       "message": "{{platform == 'darwin' ? self.cmds.darwin : self.cmds[platform][gpu]}}",
-      "on": [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
+      "on": [{
+        "event": "/http:\/\/[0-9.:]+/",
+        "done": true
+      }, {
+        "event": "/error:/i",
+        "break": false
+      }]
     }
   }, {
     "method": "local.set",
